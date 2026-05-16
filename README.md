@@ -129,9 +129,9 @@ const CONFIG = {
   ollamaUrl: "http://localhost:11434",
 
   prompts: {
-    explain: "Explain what this code does...",
-    bugs:    "Find bugs and vulnerabilities...",
-    improve: "Suggest improvements..."
+    explain: "Responde siempre en español. Explica qué hace este código línea por línea en términos simples:",
+    bugs:    "Responde siempre en español. Encuentra bugs, errores o vulnerabilidades en este código y explica cada uno:",
+    improve: "Responde siempre en español. Sugiere mejoras concretas para este código en términos de rendimiento, legibilidad y buenas prácticas:"
   }
 };
 ```

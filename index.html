@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Code Analyzer AI</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Syne:wght@400;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <div class="logo-dot"></div>
+    Code Analyzer AI
+  </div>
+  <select id="langSelect">
+    <option value="">Any Language</option>
+    <option value="Python">Python</option>
+    <option value="JavaScript">JavaScript</option>
+    <option value="TypeScript">TypeScript</option>
+    <option value="Java">Java</option>
+    <option value="C++">C++</option>
+  </select>
+</header>
+
+<main>
+  <!-- LEFT PANEL -->
+  <div class="panel panel-left">
+    <div class="panel-header">
+      <span class="panel-label">Input</span>
+      <span class="char-count" id="charCount">0 chars</span>
+    </div>
+    <textarea id="codeInput" placeholder="// Paste your code here...&#10;&#10;function example() {&#10;  return null&#10;}"></textarea>
+    <div class="actions">
+      <button class="btn btn-explain" onclick="analyze('explain')">🔍 Explain</button>
+      <button class="btn btn-bugs"    onclick="analyze('bugs')">🐛 Bugs</button>
+      <button class="btn btn-improve" onclick="analyze('improve')">✨ Improve</button>
+      <button class="btn-clear"       onclick="clearAll()">✕ Clear</button>
+    </div>
+  </div>
+
+  <!-- RIGHT PANEL -->
+  <div class="panel">
+    <div class="panel-header">
+      <span class="panel-label" id="outputLabel">Output</span>
+      <span class="char-count" id="tokenCount"></span>
+    </div>
+    <div class="output-area" id="output">
+      <div class="placeholder">
+        <div class="placeholder-icon">⬡</div>
+        <div class="placeholder-text">Paste code and choose an action</div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="status-item">
+    <div class="status-dot" id="ollamaStatus"></div>
+    <span id="ollamaLabel">Ollama: checking...</span>
+  </div>
+  <div class="status-item">model: phi3</div>
+  <div class="status-item" id="modeStatus"></div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/ollama.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

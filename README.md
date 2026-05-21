@@ -1,4 +1,5 @@
 # 🧠 Code Analyzer AI
+link repositorio: https://github.com/valncabs/IA_local_phi-3.git
 
 **Problema:** Los developers junior pierden horas entendiendo código ajeno o buscando bugs en Stack Overflow.
 
